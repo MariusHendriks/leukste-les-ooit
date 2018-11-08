@@ -13,6 +13,22 @@
       <div class="jumbotron">
         <h1>Github workshop</h1> 
         <p>Als jullie goed opletten begrijpen jullie waarom en hoe je Github gebruikt!</p> 
+        <p>
+        <?php
+        //Check wat de studenten moeten doen als het project zo af is
+        $ProjectDone = false;
+        $Pauze = false;
+
+        if ($ProjectDone && $Pauze){
+          echo 'Ga maar pauze houden';
+        } else if ($ProjectDone){
+          echo 'Verder aan je eigen project';
+        } else {
+          echo 'Even project afmaken.';
+        }
+        ?>
+        </p>
+        
       </div>
       <!-- bootstrap list group -->
       <ul class="list-group">
