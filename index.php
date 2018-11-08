@@ -14,19 +14,23 @@
         <h1>Github workshop</h1> 
         <p>Als jullie goed opletten begrijpen jullie waarom en hoe je Github gebruikt!</p> 
       </div>
+      <!-- bootstrap list group -->
       <ul class="list-group">
         <?php
+        //Checkt of er PHP files in "Mensen" zijn.
         if(glob("Mensen/*.php") != null){
-          foreach (glob("Mensen/*.php") as $gebruiker){
+          //Als dat zo, maakt hij voor elke user een list-group-item aan met daarin de content van die file. 
+          foreach (glob("Mensen/*.php") as $mens){
             ?>
             <li class="list-group-item">
-              <?php include $gebruiker; ?>
+              <!-- hier wordt dus de daadwerkelijke content ingeladen -->
+              <?php include $mens; ?>
             </li>
           <?php } 
+            //Als er geen files zijn, laat de code No users yet zien.
             }else{
               echo "<li class='list-group-item'>No users yet</li>";
-            }?>
-        
+            }?>  
       </ul>
     </div>
   </body>
